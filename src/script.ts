@@ -34,7 +34,23 @@
   }
 
   function setupElements(): void {
-    
+    if (typeof document !== 'undefined') {
+      elements.loanAmountEl = document.getElementById('loanAmount') as HTMLInputElement;
+      elements.interestRateEl = document.getElementById('interestRate') as HTMLInputElement;
+      elements.interestSlider = document.getElementById('interestRateSlider') as HTMLInputElement;
+      elements.loanTenureEl = document.getElementById('loanTenure') as HTMLInputElement;
+      elements.startDateEl = document.getElementById('startDate') as HTMLInputElement;
+      elements.emiOutput = document.getElementById('emiOutput');
+      elements.interestOutput = document.getElementById('interestOutput');
+      elements.paymentOutput = document.getElementById('paymentOutput');
+      elements.yearBtn = document.getElementById('yearBtn');
+      elements.monthBtn = document.getElementById('monthBtn');
+      elements.lightBtn = document.getElementById('lightBtn');
+      elements.darkBtn = document.getElementById('darkBtn');
+      elements.calculateBtn = document.getElementById('calculateBtn');
+      elements.clearBtn = document.getElementById('clearBtn');
+      elements.loanTypeRadios = document.querySelectorAll<HTMLInputElement>('input[name="loanType"]');
+    }
   }
 
   function setupEvents(): void {
